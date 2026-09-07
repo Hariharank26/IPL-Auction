@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IPLAuctionFirestoreSchema",
+  "entities": {
+    "users": {
+      "type": "collection",
+      "description": "Registered user accounts and manager career stats",
+      "fields": {
+        "uid": { "type": "string", "description": "Firebase Auth user ID" },
+        "displayName": { "type": "string", "description": "User Google display name" },
+        "email": { "type": "string", "description": "User email address" },
+        "photoURL": { "type": "string", "description": "User avatar photo URL" },
+        "managerUsername": { "type": "string", "description": "Chosen manager username (min 5 chars)" },
+        "favoriteTeamId": { "type": "string", "description": "Preferred IPL franchise" },
+        "stats": {
+          "type": "map",
+          "description": "Aggregated career statistics",
+          "fields": {
+            "auctionsPlayed": { "type": "number" },
+            "auctionsWon": { "type": "number" },
+            "bestTop5Score": { "type": "number" },
+            "totalSpentCr": { "type": "number" },
+            "totalPlayersBought": { "type": "number" }
+          }
+        },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "subcollections": {
+        "auctionHistory": {
+          "type": "collection",
+          "description": "Historical completed auction results for this user",
+          "fields": {
+            "auctionId": { "type": "string" },
+            "completedAt": { "type": "timestamp" },
+            "gameMode": { "type": "string" },
+            "userTeamId": { "type": "string" },
+            "userRank": { "type": "number" },
+            "isChampion": { "type": "boolean" },
+            "userTop5Score": { "type": "number" },
+            "userPurseRemaining": { "type": "number" },
+            "championTeamId": { "type": "string" },
+            "championManager": { "type": "string" },
+            "championTop5Score": { "type": "number" },
+            "top5Picks": { "type": "array" },
+            "allStandings": { "type": "array" }
+          }
+        }
+      }
+    },
+    "auctions": {
+      "type": "collection",
+      "description": "Global completed auction records and tournament hall of fame",
+      "fields": {
+        "auctionId": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "gameMode": { "type": "string" },
+        "championTeamId": { "type": "string" },
+        "championManager": { "type": "string" },
+        "championScore": { "type": "number" },
+        "createdByUid": { "type": "string" },
+        "standings": { "type": "array" }
+      }
+    }
+  }
+}

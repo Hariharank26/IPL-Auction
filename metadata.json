@@ -1,0 +1,6 @@
+{
+  "name": "IPL Auction 2026 - Dream Team Battle",
+  "description": "Real-time IPL cricket auction simulator featuring 7-player Blitz and 18-player Mega Auction modes (₹120 Cr purse, 130 players), tactical Playing XI squad building, and simulated IPL season with match scorecards, points table, and awards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

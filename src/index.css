@@ -1,0 +1,669 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Space Grotesk', 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.015em;
+    background-color: #030305;
+    color: #f1f2f4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom thin dark scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050508;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 246, 54, 0.4);
+  }
+
+  /* Hide scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Modern Geometric Typography from Reference UI */
+.font-display {
+  font-family: 'Space Grotesk', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+.font-body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+.font-timer {
+  font-family: 'JetBrains Mono', 'Chakra Petch', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Re-mapped for high visual clarity, elegance, and zero clumsiness across existing views */
+.font-teko {
+  font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+.font-condensed {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.01em;
+}
+.font-sports {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Reference Image Palette: Electric Lime & Matte Obsidian System */
+.text-electric-lime {
+  color: #D4F636;
+}
+.text-electric-lime-glow {
+  color: #D4F636;
+  text-shadow: 0 0 16px rgba(212, 246, 54, 0.45);
+}
+.bg-electric-lime {
+  background-color: #D4F636;
+  color: #030304;
+}
+.border-electric-lime {
+  border-color: rgba(212, 246, 54, 0.45);
+}
+.ring-electric-lime {
+  box-shadow: 0 0 0 2px #D4F636, 0 0 24px rgba(212, 246, 54, 0.35);
+}
+.glow-lime {
+  box-shadow: 0 0 25px rgba(212, 246, 54, 0.25);
+}
+
+/* ===================================================
+   REALISTIC AI TYPOGRAPHY & PHOSPHOR COLOR ENGINE
+   =================================================== */
+
+/* Holographic Liquid Platinum AI Heading */
+.text-ai-title {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 40%, #CFFAFE 75%, #D4F636 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 16px rgba(212, 246, 54, 0.25));
+}
+
+/* Molten Gold & Amber Cyber Currency Amount */
+.text-ai-currency {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FEF08A 35%, #F59E0B 85%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.35));
+}
+
+/* Quantum Cyan Phosphor Readout */
+.text-ai-cyan {
+  color: #00F5D4;
+  text-shadow: 0 0 12px rgba(0, 245, 212, 0.45);
+}
+
+/* Electric Neural Lime Readout */
+.text-ai-lime {
+  color: #D4F636;
+  text-shadow: 0 0 14px rgba(212, 246, 54, 0.45);
+}
+
+/* Neural Violet AI Bot Readout */
+.text-ai-violet {
+  color: #C084FC;
+  text-shadow: 0 0 12px rgba(192, 132, 252, 0.45);
+}
+
+/* Ice Silver High-Clarity Body/Subtitle */
+.text-ai-silver {
+  color: #F1F5F9;
+}
+
+/* Crisp Slate AI Telemetry */
+.text-ai-slate {
+  color: #94A3B8;
+}
+
+/* Glowing Monospace Digits */
+.text-ai-mono-glow {
+  font-family: 'JetBrains Mono', monospace;
+  color: #38BDF8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+}
+
+/* Laser Urgent Warning Text */
+.text-ai-laser {
+  color: #FB7185;
+  text-shadow: 0 0 14px rgba(244, 63, 94, 0.6);
+}
+
+/* High-tech AI Badge */
+.ai-badge-glow {
+  background: rgba(12, 16, 26, 0.85);
+  border: 1px solid rgba(0, 245, 212, 0.35);
+  color: #00F5D4;
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.ai-badge-lime {
+  background: rgba(16, 20, 10, 0.85);
+  border: 1px solid rgba(212, 246, 54, 0.4);
+  color: #D4F636;
+  box-shadow: 0 0 15px rgba(212, 246, 54, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Matte Obsidian Hardware Surface (matching the black matte controller body) */
+.bg-matte-obsidian {
+  background: rgba(10, 10, 14, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+}
+
+.bg-obsidian-subtle {
+  background: rgba(18, 19, 26, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Reference UI Background: Deep matte obsidian black with smooth ambient lighting */
+.bg-stadium-mesh {
+  background-color: #030305;
+  background-image: 
+    radial-gradient(ellipse 90% 45% at 50% -10%, rgba(212, 246, 54, 0.04) 0%, transparent 60%),
+    radial-gradient(circle 900px at 90% 20%, rgba(255, 255, 255, 0.015) 0%, transparent 55%),
+    radial-gradient(circle 700px at 10% 40%, rgba(212, 246, 54, 0.02) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+.bg-carbon {
+  background-color: #08080b;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.015) 1px, #050508 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+/* Holographic Trading Card Sheen */
+@keyframes holoSheen {
+  0% { transform: translateX(-150%) rotate(25deg); }
+  100% { transform: translateX(250%) rotate(25deg); }
+}
+
+.holo-sheen-active {
+  position: relative;
+  overflow: hidden;
+}
+.holo-sheen-active::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 215, 0, 0.25) 35%,
+    rgba(0, 195, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0.15) 45%,
+    transparent 55%
+  );
+  transform: rotate(25deg);
+  animation: holoSheen 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* 3D Tactile Bidding Paddle & Beveled Buttons in Electric Lime & Matte Obsidian */
+.btn-paddle-primary {
+  background: linear-gradient(180deg, #D4F636 0%, #b8db1d 100%);
+  color: #030305;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 5px 0 #738c08,
+    0 10px 25px rgba(212, 246, 54, 0.35);
+  transition: all 0.08s ease-out;
+}
+.btn-paddle-primary:hover {
+  background: linear-gradient(180deg, #e4ff50 0%, #c4e820 100%);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 5px 0 #738c08,
+    0 12px 30px rgba(212, 246, 54, 0.45);
+}
+.btn-paddle-primary:active {
+  transform: translateY(4px);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 1px 0 #738c08,
+    0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-paddle-secondary {
+  background: linear-gradient(180deg, #14161f 0%, #0b0c12 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 4px 0 #020204,
+    0 8px 16px rgba(0, 0, 0, 0.6);
+  transition: all 0.08s ease-out;
+}
+.btn-paddle-secondary:hover {
+  background: linear-gradient(180deg, #1d1f2b 0%, #12141c 100%);
+  border-color: rgba(212, 246, 54, 0.4);
+}
+.btn-paddle-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 1px 0 #020204,
+    0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Digital LED Display Numbers */
+.led-timer {
+  font-family: 'Chakra Petch', 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Metallic Card Borders */
+.gold-card-border {
+  border: 2px solid #eab308;
+  box-shadow: 
+    0 0 15px rgba(234, 179, 8, 0.3),
+    inset 0 0 15px rgba(234, 179, 8, 0.15);
+}
+
+.platinum-card-border {
+  border: 2px solid #38bdf8;
+  box-shadow: 
+    0 0 15px rgba(56, 189, 248, 0.3),
+    inset 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+.emerald-card-border {
+  border: 2px solid #10b981;
+  box-shadow: 
+    0 0 15px rgba(16, 185, 129, 0.3),
+    inset 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+/* ===================================================
+   REALISTIC IPL BROADCAST & AUCTION STAGE SYSTEM
+   =================================================== */
+
+/* Realistic Wooden Auctioneer Gavel & Strike Block */
+@keyframes gavelStrikeDown {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-38deg) translateY(-14px); }
+  65% { transform: rotate(18deg) translateY(6px); }
+  80% { transform: rotate(0deg) translateY(0); }
+  90% { transform: rotate(-5deg) translateY(-2px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes shockwavePulse {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes paddleRaiseUp {
+  0% { transform: translateY(12px) scale(0.95); opacity: 0.8; }
+  60% { transform: translateY(-8px) scale(1.04); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.animate-gavel-strike {
+  animation: gavelStrikeDown 0.42s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: bottom right;
+}
+
+.animate-shockwave {
+  animation: shockwavePulse 0.5s ease-out forwards;
+}
+
+.animate-paddle-raise {
+  animation: paddleRaiseUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-live-pulse {
+  animation: livePulse 1.8s infinite ease-in-out;
+}
+
+/* Authentic Wooden Texture & Bevel for Auctioneer Desk & Paddles */
+.wood-mahogany {
+  background: linear-gradient(180deg, #3d1b11 0%, #261009 50%, #170a05 100%);
+  border: 1px solid #5c2919;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 180, 140, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+.brass-gold-trim {
+  background: linear-gradient(135deg, #f7d070 0%, #d4a034 50%, #9c6c18 100%);
+  color: #1a0e04;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Realistic Television Broadcast Lower-Third Banner */
+.broadcast-strap {
+  background: linear-gradient(90deg, #0b0f19 0%, #121829 40%, #0d121f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Authentic 3D Bidding Paddle Styles */
+.paddle-disc {
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.18) 0%, transparent 60%),
+              linear-gradient(180deg, #181d2d 0%, #0d101a 100%);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.8),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.paddle-handle {
+  width: 14px;
+  height: 28px;
+  background: linear-gradient(90deg, #3d2314 0%, #6e3f24 45%, #2a180d 100%);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 
+    inset 1px 0 1px rgba(255, 255, 255, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* TV Broadcast Screen Glass Overlay */
+.tv-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* ===================================================
+   UIVERSE STATS CARD ANIMATION (Inspired by Fcodingx)
+   Adapted to IPL Auction 2026 AI Cyber UI Palette
+   =================================================== */
+.uiverse-stats-card {
+  width: 100%;
+  min-height: 98px;
+  max-height: 98px;
+  padding: 0.65rem 0.85rem;
+  background: rgba(13, 17, 26, 0.82);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 245, 212, 0.22);
+  border-bottom: 3px solid rgba(0, 245, 212, 0.45);
+  border-left: 2px solid rgba(0, 245, 212, 0.65);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transform: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  color: #F1F5F9;
+  cursor: pointer;
+  position: relative;
+}
+
+.uiverse-stats-card:hover,
+.uiverse-stats-card.expanded {
+  min-height: 254px;
+  max-height: 420px;
+  transform: none;
+  background: rgba(10, 13, 20, 0.96);
+  border-color: rgba(0, 245, 212, 0.55);
+  border-bottom: 3px solid rgba(212, 246, 54, 0.7);
+  border-left: 2px solid rgba(212, 246, 54, 0.85);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75), 0 0 25px rgba(0, 245, 212, 0.2);
+}
+
+.uiverse-stats-card .align {
+  padding: 0.2rem 0.2rem 0.5rem 0.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+}
+
+.uiverse-stats-card .red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff605c;
+  box-shadow: -2px 2px 6px rgba(255, 96, 92, 0.5);
+  transition: transform 0.2s;
+}
+
+.uiverse-stats-card .yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffbd44;
+  box-shadow: -2px 2px 6px rgba(255, 189, 68, 0.5);
+  transition: transform 0.2s;
+}
+
+.uiverse-stats-card .green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ca4e;
+  box-shadow: -2px 2px 6px rgba(0, 202, 78, 0.5);
+  transition: transform 0.2s;
+}
+
+.uiverse-stats-card:hover .red,
+.uiverse-stats-card.expanded .red {
+  transform: scale(1.15);
+}
+.uiverse-stats-card:hover .yellow,
+.uiverse-stats-card.expanded .yellow {
+  transform: scale(1.15);
+}
+.uiverse-stats-card:hover .green,
+.uiverse-stats-card.expanded .green {
+  transform: scale(1.15);
+}
+
+.uiverse-stats-card h1 {
+  text-align: center;
+  font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: #00F5D4;
+  text-shadow: -6px 4px 10px rgba(0, 245, 212, 0.45);
+  text-transform: uppercase;
+  margin: 0.2rem 0 0.25rem 0;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.uiverse-stats-card:hover h1,
+.uiverse-stats-card.expanded h1 {
+  color: #D4F636;
+  text-shadow: -6px 4px 12px rgba(212, 246, 54, 0.5);
+}
+
+.uiverse-stats-card p {
+  color: #94A3B8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.uiverse-stats-content-expanded {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.35s ease, max-height 0.4s ease;
+}
+
+.uiverse-stats-card:hover .uiverse-stats-content-expanded,
+.uiverse-stats-card.expanded .uiverse-stats-content-expanded {
+  opacity: 1;
+  max-height: 350px;
+}
+
+.uiverse-stats-card:hover .uiverse-stats-teaser,
+.uiverse-stats-card.expanded .uiverse-stats-teaser {
+  display: none;
+}
+
+/* ===================================================
+   UIVERSE SPEAKER TOGGLE SWITCH (By vinodjangid07)
+   Adapted with IPL Cyber / AI UI Colors & Metrics
+   =================================================== */
+.uiverse-audio-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.uiverse-audio-checkbox {
+  display: none;
+}
+
+.uiverse-audio-toggle .toggleSwitch {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0e16;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.uiverse-audio-toggle .toggleSwitch:hover {
+  background-color: #151824;
+  border-color: rgba(212, 246, 54, 0.5);
+  box-shadow: 0 0 15px rgba(212, 246, 54, 0.25), 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.uiverse-audio-toggle .speaker {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.uiverse-audio-toggle .speaker svg {
+  width: 17px;
+  height: 17px;
+}
+
+.uiverse-audio-toggle .speaker svg path:first-child {
+  stroke: #D4F636;
+  fill: #D4F636;
+}
+
+.uiverse-audio-toggle .speaker svg path:last-child {
+  stroke: #00F5D4;
+}
+
+.uiverse-audio-toggle .mute-speaker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: 3;
+  transition-duration: 0.3s;
+}
+
+.uiverse-audio-toggle .mute-speaker svg {
+  width: 17px;
+  height: 17px;
+}
+
+.uiverse-audio-toggle .mute-speaker svg path:first-child {
+  stroke: #94A3B8;
+  fill: #94A3B8;
+}
+
+.uiverse-audio-toggle .mute-speaker svg path:last-child {
+  stroke: #F87171;
+}
+
+/* Checked state = Muted */
+.uiverse-audio-checkbox:checked + .toggleSwitch {
+  border-color: rgba(248, 113, 113, 0.4);
+  background-color: #121015;
+}
+
+.uiverse-audio-checkbox:checked + .toggleSwitch:hover {
+  border-color: rgba(248, 113, 113, 0.7);
+  box-shadow: 0 0 15px rgba(248, 113, 113, 0.25), 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.uiverse-audio-checkbox:checked + .toggleSwitch .speaker {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.uiverse-audio-checkbox:checked + .toggleSwitch .mute-speaker {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.uiverse-audio-checkbox:active + .toggleSwitch {
+  transform: scale(0.85);
+}
+
+
+
+
+
